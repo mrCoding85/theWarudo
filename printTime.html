@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eimi fukada</title>
+</head>
+<link rel="icon" href="1.jpeg">
+<body onload="load()">
+<h1 id="header">Test your luck!</h1>
+<h2 id="header2">Gain the code</h2>
+<style>
+    #header {
+        color: red;
+        background: yellow;
+        position: relative;
+    }
+
+    #header2 {
+        color: red;
+        position: relative;
+    }
+
+    #go {
+        color: yellow;
+        background: red;
+        position: center;
+    }
+
+    #stop {
+        color: yellow;
+        background: red;
+        position: center;
+    }
+
+</style>
+
+<div>
+    <img name="pic1" src="1.jpeg" id="pic1" width="210px" height="110px"/>
+    <img name="pic2" src="2.jpeg" id="pic2" width="210px" height="110px"/>
+    <img name="pic3" src="3.jpeg" id="pic3" width="210px" height="110px"/>
+    <div>
+        <button id="go" onclick="go()"> GO! </button>
+        <button id="stop" onclick="stop()"> STOP! </button>
+        <script src="runningPic.js"> </script>
+    </div>
+</div>
+
+</body>
+</html>
