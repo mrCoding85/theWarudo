@@ -5,9 +5,16 @@ var images = [
     "4.jpeg"
 ];
 
+var resultPic = [
+    "result.jpg",
+    "sauce.jpg"
+];
+
+var playTime = 3;
 var myTimeOut;
 
 function go() {
+    document.result.src = "white.png";
     var i = getRandomInt(4);
     var j = getRandomInt(4);
     var k = getRandomInt(4);
@@ -19,12 +26,23 @@ function go() {
 
 function stop() {
     clearTimeout(myTimeOut);
+    //updatePlayTime();
     congratulation();
+}
+
+function updatePlayTime() {
+    --playTime;
+    document.getElementById("playTime").innerHTML = "Play time: " + playTime;
+    if (playTime < 1) {
+        playTime = 0;
+    }
 }
 
 function congratulation() {
     if (document.pic1.src === document.pic2.src && document.pic2.src === document.pic3.src) {
-        alert("Damn bro, you won. The code is MIDV-037");
+        document.result.src = resultPic[1];
+    } else {
+        document.result.src = resultPic[0];
     }
 }
 function getRandomInt(max) {

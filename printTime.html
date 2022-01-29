@@ -6,8 +6,8 @@
 </head>
 <link rel="icon" href="1.jpeg">
 <body onload="load()">
-<h1 id="header">Test your luck!</h1>
-<h2 id="header2">Gain the code</h2>
+<p id="header">Test your luck!</p>
+<p id="header2"><strong> Gain the sauce </strong></p>
 <style>
     #header {
         color: red;
@@ -16,7 +16,7 @@
     }
 
     #header2 {
-        color: red;
+        color: gold;
         position: relative;
     }
 
@@ -27,13 +27,21 @@
     }
 
     #stop {
-        color: yellow;
+        color: gold;
         background: red;
         position: center;
     }
+    #resultText {
+        color: gold;
+        position: relative;
+    }
 
 </style>
-
+<style>
+    body {
+        background-image: url("backgr.jpg");
+    }
+</style>
 <div>
     <img name="pic1" src="1.jpeg" id="pic1" width="210px" height="110px"/>
     <img name="pic2" src="2.jpeg" id="pic2" width="210px" height="110px"/>
@@ -42,7 +50,12 @@
         <button id="go" onclick="go()"> GO! </button>
         <button id="stop" onclick="stop()"> STOP! </button>
         <script src="runningPic.js"> </script>
+        <div>
+            <p id="resultText"> <strong> Result: </strong></p>
+            <img name="result" src="white.png" width="410px" height="310px">
+        </div>
     </div>
+
 </div>
 
 </body>
